@@ -21,6 +21,7 @@
     <div class="container">
       <div class="input-group mb-3">
         <input
+          id="inputBalance"
           type="text"
           class="form-control"
           aria-label="Dollar amount (with dot and two decimal places)"
@@ -30,6 +31,7 @@
       </div>
       <div class="input-group mb-3">
         <input
+          id="inputRange"
           type="text"
           class="form-control"
           aria-label="Dollar amount (with dot and two decimal places)"
@@ -45,6 +47,7 @@
       </div>
       <div class="input-group mb-3">
         <input
+          id="inputInterest"
           type="text"
           class="form-control"
           placeholder="이율입력"
@@ -52,6 +55,7 @@
           aria-describedby="button-addon2"
         />
         <button
+          id="btnCalc"
           class="btn btn-outline-secondary"
           type="button"
           id="button-addon2"
@@ -69,6 +73,9 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+
+    <script src="./interestCalculator.js"></script>
+    <script src="./useBootstrap.js"></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
