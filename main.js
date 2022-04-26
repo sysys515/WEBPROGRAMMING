@@ -17,6 +17,6 @@ function onBtnCalculation() {
   const simpleInterestResult = calcSimpleInterest(balance, interest, range);
   console.log("단리 적용 후 원금변화", simpleInterestResult);
   //복리 계산 시 결과
-  const compoumdInterestResult = calcSimpleInterest(balance, interest, range);
+  const compoudInterestResult = calcSimpleInterest(balance, interest, range);
   console.log("복리 적용 후 원금변화", compoundInterestResult);
 }
