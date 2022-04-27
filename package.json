@@ -1,0 +1,22 @@
+{
+  "name": "webprogramming",
+  "version": "1.0.0",
+  "description": "고급웹프로그래밍 강의 프로젝트",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sysys515/WEBPROGRAMMING.git"
+  },
+  "author": "YS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sysys515/WEBPROGRAMMING/issues"
+  },
+  "homepage": "https://github.com/sysys515/WEBPROGRAMMING#readme",
+  "dependencies": {
+    "express": "^4.18.0"
+  }
+}

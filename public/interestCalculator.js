@@ -23,5 +23,5 @@ function calcSimpleInterest(balance, interest, range) {
   return balance + pureInterest;
 }
 
-// exports.calcCompoundInterest = calcCompoundInterest;
-// exports.calcSimpleInterest = calcSimpleInterest;
+exports.calcCompoundInterest = calcCompoundInterest;
+exports.calcSimpleInterest = calcSimpleInterest;
