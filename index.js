@@ -7,12 +7,30 @@ const port = 4000;
 // http:80
 // https:443
 
+const human = {
+  name: "YeSeo",
+  age: 22,
+  birth: "20010515",
+};
+
 console.log("모듈 테스트", interestCalculator.calcSimpleInterest(100, 10, 3));
 
 app.use("/html", express.static("public"));
+app.set("view engin", "ejs");
 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.render("index", {
+    name: "황예서",
+  });
+  //res.json(human);
+});
+
+app.get("/my", (req, res) => {
+  res.json({
+    ame: "YeSeo",
+    age: 22,
+    birth: "20010515",
+  });
 });
 
 app.get("/simple", (req, res) => {
