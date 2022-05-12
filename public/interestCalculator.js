@@ -1,6 +1,6 @@
 // 복리계산 함수
 // param: balance (원금), interest (이율), range(횟수)
-//return: 복리계산결과 반환, tyle uinit
+// return: 복리계산결과 반환, type uinit
 function calcCompoundInterest(balance, interest, range) {
   // 복리 계산 예제
   // 1회: 100*1.1=110
@@ -15,7 +15,7 @@ function calcCompoundInterest(balance, interest, range) {
 }
 
 //단리계산 함수
-//return: 단리계산결과, tyle uinit
+//return: 단리계산결과, type uinit
 function calcSimpleInterest(balance, interest, range) {
   // 순수 이자
   const pureInterest = balance * (interest / 100) * range;
@@ -23,5 +23,5 @@ function calcSimpleInterest(balance, interest, range) {
   return balance + pureInterest;
 }
 
-exports.calcCompoundInterest = calcCompoundInterest;
-exports.calcSimpleInterest = calcSimpleInterest;
+// exports.calcCompoundInterest = calcCompoundInterest;
+// exports.calcSimpleInterest = calcSimpleInterest;

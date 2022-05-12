@@ -13,6 +13,17 @@ const human = {
   birth: "20010515",
 };
 
+const feeds = [
+  {
+    content: "1번피드",
+    tags: "#강의 #테스트",
+  },
+  {
+    content: "2번피드",
+    tags: "#강의 #테스트",
+  },
+];
+
 console.log("모듈 테스트", interestCalculator.calcSimpleInterest(100, 10, 3));
 
 app.use("/html", express.static("public"));
@@ -25,12 +36,62 @@ app.get("/", (req, res) => {
   //res.json(human);
 });
 
+//CRUD
+//CREATE,READ,UPDATE,DELETE
+//PERSON 데이터
+//POST,GET,PUT,DELETE
+
 app.get("/my", (req, res) => {
   res.json({
-    ame: "YeSeo",
+    name: "YeSeo",
     age: 22,
     birth: "20010515",
   });
+});
+
+// Feed 목록 가져오기
+app.get("/feeds", (req, res) => {
+  const feedsJson = {
+    body: {
+      feeds: feeds,
+    },
+  };
+  res.json(feedsJson);
+});
+
+// Feed 상세 가져오기
+app.get("/feeds/:id", (req, res) => {
+  const feedId = Number(req.params.id);
+
+  const feed = {
+    body: {
+      feed: feeds[feedId - 1],
+    },
+  };
+
+  res.json(feed);
+});
+
+// Feed 등록하기
+app.post("/feeds", (req, res) => {
+  console.log(req.body);
+  const { content, tags } = req.body;
+  const feed = {
+    content: `${content} ${feeds.length + 1}번째`,
+    tags: tags,
+  };
+  feeds.push(req.body);
+  res.json({ message: "정상적으로 피드가 등록 되었습니다." });
+});
+
+// Feed 수정하기
+app.put("/feeds/:id", (req, res) => {
+  //feeds id에 해당하는 녀석의 내용을 바꾸고 응답
+});
+
+// Feed 삭제하기
+app.delete("/feeds/:id", (req, res) => {
+  // feeds id에 해당하는 녀석의 내용을 삭제하고 응답
 });
 
 app.get("/simple", (req, res) => {
